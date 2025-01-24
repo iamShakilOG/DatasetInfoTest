@@ -21,5 +21,21 @@
         ],
         "context_root": "Report"
     },
-    "min_instance_version": "6.5.22"
+    "min_instance_version": "6.5.22",
+    "datasets": {
+        "dataset_1": {
+            "name": "Image Dataset 1",
+            "description": "This is the first dataset containing images of various categories.",
+            "path": "/path/to/dataset1",  // Replace this with your actual dataset path
+            "format": "image", 
+            "size": "500MB"
+        },
+        "dataset_2": {
+            "name": "Video Dataset 1",
+            "description": "A collection of annotated videos for analysis.",
+            "path": "/path/to/dataset2",  // Replace this with your actual dataset path
+            "format": "video", 
+            "size": "1.2GB"
+        }
+    }
 }
