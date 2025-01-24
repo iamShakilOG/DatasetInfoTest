@@ -1,41 +1,24 @@
 {
-    "type": "app",
-    "version": "2.0.0",
-    "name": "Test",
-    "description": "Dataset Info",
-    "categories": [
-        "images",
-        "visualization",
-        "exploration",
-        "statistics",
-        "visualization stats"
-    ],
-    "docker_image": "supervisely/visualization-stats:0.0.5",
-    "icon": "https://user-images.githubusercontent.com/12828725/183916661-224ff8cb-a3d1-4b82-a629-def8c6de1db5.png",
-    "poster": "https://user-images.githubusercontent.com/106374579/187223426-ec7e0fae-8ba9-48fd-b71f-8680cc0f1b49.png",
-    "entrypoint": "python -m uvicorn src.main:app --host 0.0.0.0 --port 8000",
-    "port": 8000,
-    "context_menu": {
-        "target": [
-            "images_project"
-        ],
-        "context_root": "Report"
-    },
-    "min_instance_version": "6.5.22",
-    "datasets": {
-        "dataset_1": {
-            "name": "Image Dataset 1",
-            "description": "This is the first dataset containing images of various categories.",
-            "path": "/path/to/dataset1",  // Replace this with your actual dataset path
-            "format": "image", 
-            "size": "500MB"
-        },
-        "dataset_2": {
-            "name": "Video Dataset 1",
-            "description": "A collection of annotated videos for analysis.",
-            "path": "/path/to/dataset2",  // Replace this with your actual dataset path
-            "format": "video", 
-            "size": "1.2GB"
-        }
-    }
+  "name": "Copy project between instances",
+  "type": "app",
+  "categories": [
+    "import",
+    "images"
+  ],
+  "description": "Copies images + annotations + images metadata",
+  "docker_image": "supervisely/import-export:6.73.162",
+  "main_script": "src/main.py",
+  "modal_template": "src/modal.html",
+  "modal_template_state": {
+    "serverAddress": "",
+    "apiToken": "",
+    "projectId": ""
+  },
+  "task_location": "workspace_tasks",
+  "isolate": true,
+  "headless": true,
+  "icon": "https://img.icons8.com/color/96/000000/networking-manager.png",
+  "icon_background": "#FFFFFF",
+  "poster": "https://user-images.githubusercontent.com/48245050/182578921-e47cdecb-5726-424d-a1c9-b06dbf692b1f.png",
+  "min_instance_version": "6.11.8"
 }
